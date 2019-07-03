@@ -15,7 +15,7 @@ def qsort(array):
         return array
 
 if __name__ == "__main__":
-    unsorted = [1,2,3,4,5,6,7,8,9]
+    unsorted = ["1","2","3","4","5","6","7","8","9"]
     random.shuffle(unsorted)
     print("unsorted: {0}".format(unsorted))
     print("sorted: {0}".format(qsort(unsorted)))
