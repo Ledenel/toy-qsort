@@ -10,7 +10,9 @@ def qsort(array):
         remains = [x for i,x in enumerate(array) if i != pivot_index]
         less_equal_than_pivot = [x for x in remains if x <= pivot]
         greater_than_pivot = [x for x in remains if x > pivot]
-        return qsort(less_equal_than_pivot) + [pivot] + qsort(greater_than_pivot)
+        left_sorted = qsort(less_equal_than_pivot)
+        right_sorted = qsort(greater_than_pivot)
+        return left_sorted + [pivot] + right_sorted
     else:
         return array
 
